@@ -84,9 +84,11 @@
                             <input type="text" class="form-control" id="dom"  name="dom">
                            
                         </div>
-                        <input type="submit" value="Guardar" class="btn btn-success" >
+                       <center> <input type="submit" value="Guardar" class="btn btn-success" ></center>
                     </form>
-
+                    <div class="pull-left">
+                        <a href="<?php echo base_url('publico')  ?>" class="btn btn-danger"> Volver </a>
+                    </div>
                 </div>
             </div>
         </div>

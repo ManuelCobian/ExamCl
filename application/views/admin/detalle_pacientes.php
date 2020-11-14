@@ -336,6 +336,9 @@
 				
 				
 					<?php echo form_close(); ?>
+					<div class="pull-left">
+                        <a href="<?php echo base_url('publico')  ?>" class="btn btn-danger"> Volver </a>
+                    </div>
                   </div><!-- /.tab-pane -->
 				
                 </div><!-- /.tab-content -->
