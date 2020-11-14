@@ -328,8 +328,7 @@ class Publico extends CI_Controller
 						$crud->set_table('users');
 						$crud->set_primary_key('id'); // Indicar el campo Llave
 						$crud->set_subject('Usuarios');
-						$crud->set_primary_key('id','ca_centrales');
-						$crud->set_relation('id_central','ca_centrales','nombre');
+						
 
 						$crud->set_primary_key('id','ca_cargos');
 						$crud->set_relation('cargo','ca_cargos','cargo');
@@ -343,17 +342,17 @@ class Publico extends CI_Controller
 						
 					
 						 
-						$crud->columns('username','nom', 'email', 'cargo','tel', 'foto', 'id_central'); 
+						$crud->columns('username','nom', 'email', 'cargo','tel', 'foto'); 
 						$crud->display_as('nom','Nombre')
 						->display_as('app','Apellido Paterno')
 						->display_as('apm','Apellido Materno')
 						->display_as('email','Correo Electr&oacute;nico')
 						->display_as('tel','Tel&eacute;fono')
-						->display_as('id_central','Central Camionera');
+						;
 						
 						
 
-						$crud->fields('nom','app','apm', 'email','cargo','tel', 'foto','id_central');
+						$crud->fields('nom','app','apm', 'email','cargo','tel', 'foto');
 						 $crud->set_field_upload('foto', RUTA_USUARIOS);
 						
 						$crud->add_action('Cambiar Password', '', 'auth/change_user_password','fa-key');

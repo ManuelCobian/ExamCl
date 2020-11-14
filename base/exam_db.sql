@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         10.4.10-MariaDB - mariadb.org binary distribution
+-- Versión del servidor:         10.3.20-MariaDB - mariadb.org binary distribution
 -- SO del servidor:              Win64
 -- HeidiSQL Versión:             9.5.0.5196
 -- --------------------------------------------------------
@@ -27,27 +27,11 @@ CREATE TABLE IF NOT EXISTS `ca_cargos` (
 
 -- Volcando datos para la tabla exam_cl.ca_cargos: 3 rows
 /*!40000 ALTER TABLE `ca_cargos` DISABLE KEYS */;
-INSERT INTO `ca_cargos` (`id`, `cargo`) VALUES
+REPLACE INTO `ca_cargos` (`id`, `cargo`) VALUES
 	(1, 'Administrador Central'),
 	(2, 'Capturista de datos'),
 	(3, 'Administrador Principal');
 /*!40000 ALTER TABLE `ca_cargos` ENABLE KEYS */;
-
--- Volcando estructura para tabla exam_cl.ca_centrales
-DROP TABLE IF EXISTS `ca_centrales`;
-CREATE TABLE IF NOT EXISTS `ca_centrales` (
-  `id` bigint(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) DEFAULT NULL,
-  `domicilio` varchar(255) DEFAULT NULL,
-  `estado` varchar(255) DEFAULT NULL,
-  `correo` varchar(255) DEFAULT NULL,
-  `telefono` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
--- Volcando datos para la tabla exam_cl.ca_centrales: 0 rows
-/*!40000 ALTER TABLE `ca_centrales` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ca_centrales` ENABLE KEYS */;
 
 -- Volcando estructura para tabla exam_cl.ca_pacientes
 DROP TABLE IF EXISTS `ca_pacientes`;
@@ -65,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `ca_pacientes` (
 
 -- Volcando datos para la tabla exam_cl.ca_pacientes: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `ca_pacientes` DISABLE KEYS */;
-INSERT INTO `ca_pacientes` (`id`, `nombre`, `ap_materno`, `cpf`, `fecha_nacimiento`, `foto`, `cns`, `direccion`) VALUES
+REPLACE INTO `ca_pacientes` (`id`, `nombre`, `ap_materno`, `cpf`, `fecha_nacimiento`, `foto`, `cns`, `direccion`) VALUES
 	(1, 'Cobian', 'Luis', 'as', '01/10/1991', '20604725_10214258873651374_2296732544555536395_n.j', 'asf', 'asf');
 /*!40000 ALTER TABLE `ca_pacientes` ENABLE KEYS */;
 
@@ -144,8 +128,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 -- Volcando datos para la tabla exam_cl.users: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `username`, `password`, `passm`, `email`, `activated`, `banned`, `ban_reason`, `new_password_key`, `new_password_requested`, `new_email`, `new_email_key`, `last_ip`, `last_login`, `created`, `modified`, `isadmin`, `islider`, `nom`, `app`, `apm`, `foto`, `fondo`, `cargo`, `id_nivel`, `logged`, `id_sexo`, `apodo`, `notas`, `educacion`, `ubicacion`, `tel`, `pubkey`, `mod_ini`, `id_central`, `status_user`) VALUES
-	(1, 'lcobian', '$2a$08$XWttCLk5IbQcimDMlXSTbedw2VXklpS/WRJycRHG/7hxi5l0dNRVq', '', 'lcobianh@gmail.com', 0, 0, NULL, NULL, NULL, NULL, '0eb60a378d71d05ffd00e3ea058ccfc7', '::1', '2019-07-23 11:03:30', '2019-07-23 16:03:30', '2019-07-23 16:16:18', 0, 0, 'Luis Manuels', 'Cobian', 'Hernandez', '22df7-1521892_10202849716583428_5322571182878425809_n.jpg', '0', '2', 0, 0, 1, ' ', ' ', ' ', ' ', '  312158945', NULL, 0, 1, NULL),
+REPLACE INTO `users` (`id`, `username`, `password`, `passm`, `email`, `activated`, `banned`, `ban_reason`, `new_password_key`, `new_password_requested`, `new_email`, `new_email_key`, `last_ip`, `last_login`, `created`, `modified`, `isadmin`, `islider`, `nom`, `app`, `apm`, `foto`, `fondo`, `cargo`, `id_nivel`, `logged`, `id_sexo`, `apodo`, `notas`, `educacion`, `ubicacion`, `tel`, `pubkey`, `mod_ini`, `id_central`, `status_user`) VALUES
 	(2, 'admin', '$2a$08$NQUFJyRHolivl5VWUWTwVulFxuKXXVKnjcCcIDSZUFX.igULBDw4O', '', 'admin@gmail.com', 1, 0, NULL, NULL, NULL, NULL, '7260ce431bad1aa6d969d893861fb1b3', '::1', '2020-11-13 20:25:26', '2019-07-23 16:06:17', '2020-11-13 14:25:26', 1, 0, 'Luis  Manuel', 'Cobians', 'Hernandez', 'bites.jpg', '0', '3', 0, 0, 1, ' ', ' ', ' ', ' ', '  ', NULL, 0, 1, NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
