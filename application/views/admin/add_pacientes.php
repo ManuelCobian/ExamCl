@@ -68,7 +68,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">CPF</label>
-                            <input type="text" class="form-control" id="cpf"   name="cpf" >
+                            <input type="text" class="form-control" id="cpf"   name="cpf"  v-model="cpf"  @blur="cadastrar" >
                            
                         </div>
 
@@ -84,7 +84,7 @@
                             <input type="text" class="form-control" id="dom"  name="dom">
                            
                         </div>
-                       <center> <input type="submit" value="Guardar" class="btn btn-success" ></center>
+                       <center> <input :type="sytle" value="Guardar" class="btn btn-success" ></center>
                     </form>
                     <div class="pull-left">
                         <a href="<?php echo base_url('publico')  ?>" class="btn btn-danger"> Volver </a>

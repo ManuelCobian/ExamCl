@@ -67,7 +67,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf" value="<?php echo $paciente->cpf ?>">
+                            <input type="text" class="form-control" id="cpf" name="cpf"  v-model="cpf"  @blur="cadastrar"   value="<?php echo $paciente->cpf ?>" >
 
                         </div>
 
